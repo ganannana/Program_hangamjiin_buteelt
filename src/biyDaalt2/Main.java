@@ -1,5 +1,5 @@
 package biyDaalt2;
-
+// 2024-04-08 10:31
 public class Main {
     public static void main(String[] args) {
         Data case1 = new Data();
