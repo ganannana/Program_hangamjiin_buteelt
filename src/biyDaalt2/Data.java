@@ -31,15 +31,15 @@ public class Data {
 	float[][] angilal_data = new float[4][7];
 	public void set_angilal_data() {
 		for(int i = 0; i<angilal_too; i++) {
-			System.out.println(i+1 + "-r angilal");
-			System.out.println(i+1 + "-r angilald sursan jiliin too:");
+			System.out.println(i+1 + "-р ангилал");
+			System.out.println(i+1 + "-р ангилалд сурсан жилийн тоо:");
 			jil = in.nextFloat();
 			angilal_data[i][0] =jil;
 			dund_sur_niit_jil = dund_sur_niit_jil + jil;
-			System.out.println(i+1 + "-r angilald udurt uzeh tsagiin too:");
+			System.out.println(i+1 + "-р ангилалд үзэх тоо:");
 			tsag =  in.nextFloat();
 			angilal_data[i][1] =tsag;
-			System.out.println(i+1 + "-r angilald udurt uzeh tsagiin hargalzah hugatsaa:");
+			System.out.println(i+1 + "-р ангилалд өдөрт үзэх цагийн харгалзах хугацаа:");
 			hugatsaa =  in.nextFloat();
 			angilal_data[i][2] =hugatsaa;	
 		}
@@ -64,42 +64,42 @@ public class Data {
 			check++;
 			for(int j = 0; j<angilal_data[i][0]; j++) {
 				jiliin_niit_honog = (int) ChronoUnit.DAYS.between(LocalDate.of(ehleh_on, 9, 1), LocalDate.of(duusah_on, 6, 1));
-				System.out.println("jiliin_niit_honog: "+jiliin_niit_honog);
+				System.out.println("Жилийн нийт хоног: "+jiliin_niit_honog);
 				dayOfWeek = LocalDate.of(ehleh_on, 9, 1).getDayOfWeek();
 				check_honog = day_of_the_week.get(dayOfWeek);
-				System.out.println("ehleh_on: "+ehleh_on);
-				System.out.println("dayOfWeek: "+dayOfWeek);
-				System.out.println("check_honog: "+check_honog);
+				System.out.println("эхлэх он: "+ehleh_on);
+				System.out.println("Долоон хоногийн өдөр: "+dayOfWeek);
+				System.out.println("Хоног шалгах: "+check_honog);
 				while(check_honog != 1) {
 					if(check_honog != 6 && check_honog != 7) {
 						butarhai_hicheellesen_honog++;
 					}
 					butarhai_honog++;
 					check_honog++;	
-					System.out.println("check_honog: "+check_honog);
+					System.out.println("Хоног шалгах: "+check_honog);
 					if(check_honog == 8) {
 						check_honog = 1;
 					}
 				}
 				dayOfWeek = LocalDate.of(duusah_on, 5, 31).getDayOfWeek();
-				System.out.println("duusah_on: "+duusah_on);
-				System.out.println("dayOfWeek: "+dayOfWeek);
+				System.out.println("дуусах он: "+duusah_on);
+				System.out.println("Долоон хоногийн өдөр: "+dayOfWeek);
 				check_honog = day_of_the_week.get(dayOfWeek);
-				System.out.println("check_honog: "+check_honog);
+				System.out.println("Хоног шалгах: "+check_honog);
 				while(check_honog != 7) {
 					if(check_honog != 6 && check_honog != 7) {
 						butarhai_hicheellesen_honog++;
 					}
 					butarhai_honog++;
 					check_honog--;
-					System.out.println("check_honog: "+check_honog);
+					System.out.println("Хоног шалгах: "+check_honog);
 					if(check_honog == 0) {
 						check_honog = 7;
 					}
 				}
-				System.out.println("butarhai_honog: "+butarhai_honog);
-				System.out.println("butarhai_hicheellesen_honog: "+butarhai_hicheellesen_honog);
-				System.out.println("jiliin_niit_honog: "+jiliin_niit_honog);
+				System.out.println("Бутархай хоног: "+butarhai_honog);
+				System.out.println("Бутархай хичээллэсэн хоног: "+butarhai_hicheellesen_honog);
+				System.out.println("Жилийн нийт хоног: "+jiliin_niit_honog);
 				jiliin_buten_doloo_honog = (jiliin_niit_honog - butarhai_honog)/7;
 				jiliin_niit_hicheellesen_honog = jiliin_buten_doloo_honog*ajiliin_honog+butarhai_hicheellesen_honog;
 				ehleh_on = duusah_on;
@@ -108,10 +108,10 @@ public class Data {
 				angilal_niit_hicheellesen_honog = angilal_niit_hicheellesen_honog + jiliin_niit_hicheellesen_honog;
 				butarhai_hicheellesen_honog = 0;
 				butarhai_honog = 0;
-				System.out.println("jiliin_buten_doloo_honog: "+jiliin_buten_doloo_honog);
-				System.out.println("jiliin_niit_hicheellesen_honog: "+jiliin_niit_hicheellesen_honog);
-				System.out.println("angilal_niit_buten_doloo_honog: "+angilal_niit_buten_doloo_honog);
-				System.out.println("angilal_niit_hicheellesen_honog: "+angilal_niit_hicheellesen_honog);
+				System.out.println("Жилийн бүтэн долоон хоног: "+jiliin_buten_doloo_honog);
+				System.out.println("Жилийн нийт хичээллэсэн долоон хоног: "+jiliin_niit_hicheellesen_honog);
+				System.out.println("Ангилал тус бүрийн нийт долоон хоног: "+angilal_niit_buten_doloo_honog);
+				System.out.println("Ангилал тус бүрийн нийт хичээллэсэн хоног: "+angilal_niit_hicheellesen_honog);
 				
 				
 			}
